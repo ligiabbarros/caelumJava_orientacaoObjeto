@@ -2,8 +2,16 @@ class Conta {
 	String titular;
 	int numero;
 	String agencia;
-	double saldo;
+	private double saldo;
 	String dataAbertura;
+
+	public double getSaldo(){
+		return this.saldo;	
+	}
+
+	public void setSaldo(double saldo){
+		this.saldo = saldo;	
+	}
 
 	void saca(double valor){
 		if(valor <= this.saldo){
