@@ -1,9 +1,36 @@
 class Conta {
 	String titular;
 	int numero;
-	String agencia;
+	private String agencia;
 	private double saldo;
 	String dataAbertura;
+	private static int identificador;
+
+	//construtores
+
+	public Conta() {
+		Conta.identificador = Conta.identificador + 1;
+
+	}
+
+	public Conta(String titular) {
+
+	}
+
+	//getters e setters
+
+	public static int getIdentificador() {
+		return Conta.identificador;
+	}
+
+
+	public String getAgencia(){
+		return this.agencia;
+	}
+	
+	public void setAgencia(String agencia){
+		this.agencia = agencia;
+	}
 
 	public double getSaldo(){
 		return this.saldo;	
@@ -19,6 +46,8 @@ class Conta {
 		}
 		
 	}
+
+	//contas
 
 	void deposita(double valor){
 		this.saldo += valor;
